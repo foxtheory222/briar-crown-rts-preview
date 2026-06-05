@@ -1,8 +1,0 @@
-{
-  "morale": [
-    { "id": "standard", "steadyAt": 65, "shakenAt": 35, "lossPenalty": 8, "flankedPenalty": 10, "heroDeathPenalty": 20, "fearPenalty": 12, "bombardmentPenalty": 9 },
-    { "id": "light", "steadyAt": 70, "shakenAt": 40, "lossPenalty": 10, "flankedPenalty": 12, "heroDeathPenalty": 18, "fearPenalty": 12, "bombardmentPenalty": 10 },
-    { "id": "elite", "steadyAt": 55, "shakenAt": 25, "lossPenalty": 5, "flankedPenalty": 8, "heroDeathPenalty": 15, "fearPenalty": 8, "bombardmentPenalty": 7 },
-    { "id": "fearless", "steadyAt": 40, "shakenAt": 15, "lossPenalty": 2, "flankedPenalty": 3, "heroDeathPenalty": 5, "fearPenalty": 0, "bombardmentPenalty": 4 }
-  ]
-}

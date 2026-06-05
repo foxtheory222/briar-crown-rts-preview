@@ -1,123 +1,133 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project Briar Crown</title>
-    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%23161f18"/><path d="M32 8 48 56H16z" fill="%23d7c98c"/></svg>'>
-    <link rel="stylesheet" href="./styles.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Briar Crown RTS - Unity Preview</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-  <body>
-    <main id="shell">
-      <section id="topbar" aria-label="Resources">
-        <div class="brand">
-          <span class="mark"></span>
-          <strong>Project Briar Crown</strong>
+  <body style="margin:0;background:#05080b;display:grid;place-items:center;min-height:100vh;">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
         </div>
-        <div id="resources"></div>
-        <div class="hud-cluster">
-          <div id="state-pill">Menu</div>
-          <button id="settings-btn" class="hud-tool" type="button" aria-haspopup="dialog" aria-controls="settings-panel">
-            <span class="settings-glyph" aria-hidden="true"></span>
-            <span>Settings</span>
-          </button>
-        </div>
-      </section>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-logo-title-footer"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">BriarCrown</div>
+      </div>
+    </div>
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
 
-      <section id="game-layout">
-        <aside id="panel">
-          <button id="start-btn" class="primary">Start Skirmish</button>
-          <div class="tool-group compact faction-tools" aria-label="Faction">
-            <button data-faction="thorn_court">Thorn Court</button>
-            <button data-faction="hollow_legion">Hollow Legion</button>
-          </div>
-          <div class="tool-group compact">
-            <button data-mode="tutorial">Tutorial</button>
-            <button data-mode="campaign">Campaign Slice</button>
-            <button data-mode="local_pve">Local PvE</button>
-          </div>
-          <div id="guided-flow" aria-label="Guided flow" hidden></div>
-          <div class="tool-group build-tools">
-            <button data-build="farmstead">Farmstead</button>
-            <button data-build="logging_camp">Logging Camp</button>
-            <button data-build="mineworks">Mineworks</button>
-            <button data-build="barracks">Barracks</button>
-            <button data-build="watchtower">Watchtower</button>
-            <button data-build="war_council">War Council</button>
-            <button data-build="witchglass_cairn">Witchglass Cairn</button>
-            <button data-build="kennels_stables">Kennels/Stables</button>
-            <button data-build="relic_vault">Relic Vault</button>
-          </div>
-          <button id="rotate-btn">Rotate</button>
-          <button id="train-btn">Queue Briar Guard</button>
-          <button id="train-archer-btn">Queue Needle Archers</button>
-          <button id="train-hart-btn">Queue Hart Lancers</button>
-          <button id="research-t2-btn">Research Holdfast</button>
-          <button id="research-t3-btn">Research Citadel</button>
-          <button id="hero-btn">Recruit Thorn Queen</button>
-          <button id="ability-btn">Moon Snare</button>
-          <div id="command-surface" class="command-grid" aria-label="Command surface">
-            <button id="attack-btn">Attack Enemy Seat</button>
-            <button id="capture-btn">Capture Witchglass</button>
-            <button id="hold-btn">Hold</button>
-            <button id="rally-btn">Rally Base</button>
-            <button id="retreat-btn">Retreat</button>
-            <button id="stance-btn">Stance Guard</button>
-            <button id="formation-btn">Formation Line</button>
-            <button id="priority-btn">Priority Squads</button>
-          </div>
-          <div id="squad-cards" aria-label="Squad cards"></div>
-          <div id="command-card" aria-label="Command card"></div>
-          <div id="production-queue" aria-label="Production queue"></div>
-          <div id="objective-cards" aria-label="Objectives"></div>
-          <div id="details"></div>
-          <div id="alerts" aria-live="polite"></div>
-        </aside>
-        <canvas id="game" width="1024" height="640" aria-label="Project Briar Crown RTS battlefield"></canvas>
-        <div id="outcome-panel" class="outcome-panel" hidden aria-live="polite">
-          <span class="outcome-kicker">Match Complete</span>
-          <h2 id="outcome-title"></h2>
-          <p id="outcome-subtitle"></p>
-          <dl id="outcome-stats"></dl>
-          <div class="outcome-actions">
-            <button id="restart-btn" class="primary">Restart Skirmish</button>
-            <button id="return-menu-btn">Return to Menu</button>
-          </div>
-        </div>
-        <div id="settings-panel" class="settings-panel" hidden role="dialog" aria-modal="true" aria-labelledby="settings-title">
-          <div class="settings-head">
-            <span>
-              <span class="settings-kicker">War Table</span>
-              <h2 id="settings-title">Settings</h2>
-            </span>
-            <button id="settings-close-btn" class="icon-only" type="button" aria-label="Close settings">
-              <span class="close-glyph" aria-hidden="true"></span>
-            </button>
-          </div>
-          <div class="settings-actions" aria-label="Match actions">
-            <button id="settings-resume-btn" class="primary" type="button">Resume</button>
-            <button id="settings-restart-btn" type="button">Restart</button>
-            <button id="settings-menu-btn" type="button">Menu</button>
-          </div>
-          <div class="settings-toggles" aria-label="HUD settings">
-            <button id="compact-hud-toggle" type="button" aria-pressed="false">
-              <span class="toggle-mark" aria-hidden="true"></span>
-              <span>Compact HUD</span>
-            </button>
-            <button id="mute-audio-toggle" type="button" aria-pressed="false">
-              <span class="toggle-mark" aria-hidden="true"></span>
-              <span>Mute Cues</span>
-            </button>
-            <button id="reduced-motion-toggle" type="button" aria-pressed="false">
-              <span class="toggle-mark" aria-hidden="true"></span>
-              <span>Reduced Motion</span>
-            </button>
-          </div>
-          <div id="settings-status" class="settings-status"></div>
-        </div>
-        <pre id="text-state" hidden></pre>
-      </section>
-    </main>
-    <script type="module" src="./src/game.mjs"></script>
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        var warningBanner = document.querySelector("#unity-warning");
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/webgl.loader.js";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/webgl.data",
+        frameworkUrl: buildUrl + "/webgl.framework.js",
+        codeUrl: buildUrl + "/webgl.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "BriarCrown",
+        productVersion: "1.0",
+        showBanner: unityShowBanner,
+        // errorHandler: function(err, url, line) {
+        //    alert("error " + err + " occurred at line " + line);
+        //    // Return 'true' if you handled this error and don't want Unity
+        //    // to process it further, 'false' otherwise.
+        //    return true;
+        // },
+      };
+
+      // By default, Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      // If you would like all file writes inside Unity Application.persistentDataPath
+      // directory to automatically persist so that the contents are remembered when
+      // the user revisits the site the next time, uncomment the following line:
+      // config.autoSyncPersistentDataPath = true;
+      // This autosyncing is currently not the default behavior to avoid regressing
+      // existing user projects that might rely on the earlier manual
+      // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
+      // expected to change.
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        document.querySelector("#unity-container").className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+
+      document.querySelector("#unity-loading-bar").style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
+              }).then((unityInstance) => {
+                document.querySelector("#unity-loading-bar").style.display = "none";
+                document.querySelector("#unity-fullscreen-button").onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+
+              }).catch((message) => {
+                alert(message);
+              });
+            };
+
+      document.body.appendChild(script);
+
+    </script>
   </body>
 </html>

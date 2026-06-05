@@ -1,7 +1,0 @@
-{
-  "biomes": [
-    { "id": "grim_forest", "name": "Grim Forest", "palette": ["#17261f", "#315442", "#9fcfba"], "readabilityNotes": "Dark floor with silver-green highlights and clear paths." },
-    { "id": "moonlit_ruins", "name": "Moonlit Ruins", "palette": ["#20202b", "#69708a", "#d8f3dc"], "readabilityNotes": "Pale ruins mark objective lanes and buildable plateaus." },
-    { "id": "haunted_village", "name": "Haunted Village", "palette": ["#2a2229", "#7651a5", "#f2edf4"], "readabilityNotes": "Violet-bone accents identify Hollow corruption without hiding units." }
-  ]
-}

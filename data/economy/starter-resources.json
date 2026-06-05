@@ -1,9 +1,0 @@
-{
-  "resources": [
-    { "id": "gold", "name": "Gold", "kind": "stockpile", "startingAmount": 420, "spendable": true, "description": "Coin and tribute for buildings, squads, and research." },
-    { "id": "wood", "name": "Wood", "kind": "stockpile", "startingAmount": 260, "spendable": true, "description": "Timber for structures, palisades, and siege chassis." },
-    { "id": "food", "name": "Food", "kind": "stockpile", "startingAmount": 40, "spendable": true, "description": "Sustenance for squads, beasts, and armies on campaign." },
-    { "id": "housing", "name": "Housing", "kind": "cap", "startingCap": 12, "spendable": false, "description": "Population cap provided by settlements and cottages." },
-    { "id": "witchglass", "name": "Witchglass", "kind": "rare_stockpile", "startingAmount": 0, "spendable": true, "description": "Rare moonlit crystal refined from haunted objectives and cairns." }
-  ]
-}
