@@ -1,4 +1,4 @@
-const SPRITE_BASE_PATH = "/assets/alpha-tier1/sprites";
+const SPRITE_BASE_PATH = "./assets/alpha-tier1/sprites";
 const DISK_BASE_PATH = ["client", "web", "assets", "alpha-tier1", "sprites"];
 
 const BUILDING_SPRITES = [

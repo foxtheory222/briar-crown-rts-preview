@@ -11,8 +11,8 @@ import {
   startResearch as authorityStartResearch,
   tickMatch as authorityTickMatch,
   useHeroAbility as authorityUseHeroAbility
-} from "/shared/simulation/playable-loop.mjs";
-import { summarizeStewardEconomy } from "/shared/economy/economy.mjs";
+} from "../shared/simulation/playable-loop.mjs";
+import { summarizeStewardEconomy } from "../shared/economy/economy.mjs";
 import {
   audioSummary,
   buildAudioCueIndex,
@@ -329,24 +329,24 @@ if (requestedProofMode() === "combat_stress") {
 }
 
 async function loadData() {
-  await loadList("/data/buildings/starter-buildings.json", "buildings", data.buildings);
-  await loadList("/data/economy/starter-resources.json", "resources");
-  await loadList("/data/units/starter-units.json", "units");
-  await loadList("/data/squads/starter-squads.json", "squads", data.squads);
-  await loadList("/data/heroes/starter-heroes.json", "heroes", data.heroes);
-  await loadList("/data/abilities/starter-abilities.json", "abilities", data.abilities);
-  await loadList("/data/factions/mvp-factions.json", "factions", data.factions);
-  await loadList("/data/tactics/starter-tactics.json", "tactics", data.tactics);
-  await loadList("/data/morale/starter-morale.json", "morale");
-  await loadList("/data/combat/damage-armor.json", "combat");
-  await loadList("/data/simulation/starter-simulation.json", "simulation");
-  await loadList("/data/audio/starter-audio.json", "audio");
-  await loadList("/data/effects/starter-engine-vfx.json", "effects");
-  await loadList("/data/maps/showcase-map.json", "maps");
-  await loadList("/data/objectives/starter-objectives.json", "objectives", data.objectives);
+  await loadList("./data/buildings/starter-buildings.json", "buildings", data.buildings);
+  await loadList("./data/economy/starter-resources.json", "resources");
+  await loadList("./data/units/starter-units.json", "units");
+  await loadList("./data/squads/starter-squads.json", "squads", data.squads);
+  await loadList("./data/heroes/starter-heroes.json", "heroes", data.heroes);
+  await loadList("./data/abilities/starter-abilities.json", "abilities", data.abilities);
+  await loadList("./data/factions/mvp-factions.json", "factions", data.factions);
+  await loadList("./data/tactics/starter-tactics.json", "tactics", data.tactics);
+  await loadList("./data/morale/starter-morale.json", "morale");
+  await loadList("./data/combat/damage-armor.json", "combat");
+  await loadList("./data/simulation/starter-simulation.json", "simulation");
+  await loadList("./data/audio/starter-audio.json", "audio");
+  await loadList("./data/effects/starter-engine-vfx.json", "effects");
+  await loadList("./data/maps/showcase-map.json", "maps");
+  await loadList("./data/objectives/starter-objectives.json", "objectives", data.objectives);
   data.audioCueIndex = buildAudioCueIndex(data.content.audio);
 
-  const techResponse = await fetch("/data/tech-tree.json");
+  const techResponse = await fetch("./data/tech-tree.json");
   const techJson = await techResponse.json();
   data.content.techTree = techJson;
   for (const tier of techJson.tiers) {
@@ -2632,7 +2632,7 @@ function updateProductionQueue() {
 
     const icon = document.createElement("img");
     icon.className = "queue-icon";
-    icon.src = card.icon ? `/assets/icons/${card.icon}` : "/assets/icons/building-seat.svg";
+    icon.src = card.icon ? `./assets/icons/${card.icon}` : "./assets/icons/building-seat.svg";
     icon.alt = "";
     icon.setAttribute("aria-hidden", "true");
 
@@ -2669,7 +2669,7 @@ function updateObjectiveCards() {
 
     const icon = document.createElement("img");
     icon.className = "objective-icon";
-    icon.src = card.icon ? `/assets/icons/${card.icon}` : "/assets/icons/objective.svg";
+    icon.src = card.icon ? `./assets/icons/${card.icon}` : "./assets/icons/objective.svg";
     icon.alt = "";
     icon.setAttribute("aria-hidden", "true");
 
@@ -2922,7 +2922,7 @@ function applyCommandTooltips() {
 }
 
 function setButtonIconLabel(button, icon, text) {
-  const iconPath = icon ? `/assets/icons/${icon}` : "";
+  const iconPath = icon ? `./assets/icons/${icon}` : "";
   if (button.dataset.iconPath === iconPath && button.dataset.buttonLabel === text) {
     return;
   }
