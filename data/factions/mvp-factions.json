@@ -1,0 +1,42 @@
+{
+  "factions": [
+    {
+      "id": "thorn_court",
+      "name": "Thorn Court",
+      "fantasy": "Ancient fae nobility, living wood, moonlit hunts.",
+      "uniqueMechanic": "Rootbound Realm",
+      "mechanicRules": ["Rooted structures gain terrain aura bonuses.", "Forests regrow faster in owned territory.", "Moon pools boost reinforcement."],
+      "mechanic": {
+        "id": "rootbound_realm",
+        "auraRadius": 6,
+        "constructionSpeedMultiplier": 1.2,
+        "productionSpeedMultiplier": 1.15,
+        "moraleRecoveryPerSecond": 0.45,
+        "killSoulEssence": 0
+      },
+      "colors": { "primary": "#9fcfba", "secondary": "#d8f3dc", "accent": "#6b8f71" },
+      "heroIds": ["thorn_queen", "hartmarshal"],
+      "squadIds": ["briar_guard_squad", "needle_archer_squad", "moth_scout_squad", "hart_lancer_squad", "dew_chanter_squad", "bark_ancient_squad", "wild_hunt_rider_squad"],
+      "icon": "faction-thorn.svg"
+    },
+    {
+      "id": "hollow_legion",
+      "name": "Hollow Legion",
+      "fantasy": "Regal undead court, grave-soil economy, deathless musters.",
+      "uniqueMechanic": "Dreadsoil",
+      "mechanicRules": ["Corrupted ground empowers structures and units.", "Casualties feed soul essence for reinforcement.", "Dreadsoil anchors extend the safe muster zone."],
+      "mechanic": {
+        "id": "dreadsoil",
+        "auraRadius": 6,
+        "constructionSpeedMultiplier": 1,
+        "productionSpeedMultiplier": 1.18,
+        "moraleRecoveryPerSecond": 0,
+        "killSoulEssence": 1
+      },
+      "colors": { "primary": "#c9c1d9", "secondary": "#f2edf4", "accent": "#7651a5" },
+      "heroIds": ["bone_regent", "wailing_matron"],
+      "squadIds": ["bone_thrall_squad", "grave_bow_squad", "carrion_bat_squad", "crypt_lancer_squad", "mourning_choir_squad", "bone_wagon_squad", "dread_knight_squad"],
+      "icon": "faction-hollow.svg"
+    }
+  ]
+}

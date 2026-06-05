@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Effects",
+  "type": "object",
+  "required": ["effects"],
+  "properties": {
+    "effects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "license", "enginePackage", "rules"],
+        "properties": {
+          "id": { "type": "string" },
+          "license": { "type": "string" },
+          "enginePackage": { "type": "string" },
+          "notes": { "type": "string" },
+          "rules": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "eventKind",
+                "layer",
+                "anchor",
+                "blendMode",
+                "durationSeconds",
+                "opacity",
+                "maxConcurrent",
+                "palette",
+                "glyphs"
+              ],
+              "properties": {
+                "id": { "type": "string" },
+                "eventKind": { "type": "string" },
+                "layer": { "type": "string" },
+                "anchor": { "type": "string" },
+                "blendMode": { "type": "string" },
+                "durationSeconds": { "type": "number" },
+                "opacity": { "type": "number" },
+                "maxConcurrent": { "type": "integer" },
+                "palette": { "type": "string" },
+                "glyphs": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "notes": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

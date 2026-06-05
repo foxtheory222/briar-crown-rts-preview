@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Biomes",
+  "type": "object",
+  "required": ["biomes"],
+  "properties": {
+    "biomes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "palette", "readabilityNotes"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "palette": { "type": "array", "items": { "type": "string" } },
+          "readabilityNotes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

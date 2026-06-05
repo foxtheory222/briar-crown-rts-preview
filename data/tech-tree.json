@@ -1,0 +1,94 @@
+{
+  "tiers": [
+    {
+      "id": "t1_hamlet",
+      "name": "T1 Hamlet",
+      "tier": 1,
+      "requires": [
+        "seat_of_rule"
+      ],
+      "unlocks": [
+        "cottage_cluster",
+        "farmstead",
+        "logging_camp",
+        "mineworks",
+        "storehouse",
+        "market_cross",
+        "barracks",
+        "scout_lodge",
+        "hero_shrine",
+        "watchtower",
+        "palisade_gate",
+        "briar_guard_squad",
+        "needle_archer_squad",
+        "moth_scout_squad",
+        "bone_thrall_squad",
+        "grave_bow_squad",
+        "carrion_bat_squad",
+        "thorn_queen",
+        "bone_regent",
+        "moon_snare",
+        "grave_command"
+      ],
+      "researchSeconds": 1,
+      "costs": {}
+    },
+    {
+      "id": "t2_holdfast",
+      "name": "T2 Holdfast",
+      "tier": 2,
+      "requires": [
+        "seat_of_rule"
+      ],
+      "unlocks": [
+        "smithy",
+        "temple_of_lore",
+        "kennels_stables",
+        "workshop",
+        "infirmary",
+        "war_council",
+        "witchglass_cairn",
+        "hart_lancer_squad",
+        "dew_chanter_squad",
+        "crypt_lancer_squad",
+        "mourning_choir_squad",
+        "bone_wagon_squad",
+        "hartmarshal",
+        "wailing_matron",
+        "hart_charge",
+        "dew_mending",
+        "wail_of_ashes",
+        "mourning_litany"
+      ],
+      "researchSeconds": 45,
+      "costs": {
+        "gold": 180,
+        "wood": 120
+      }
+    },
+    {
+      "id": "t3_citadel",
+      "name": "T3 Citadel",
+      "tier": 3,
+      "requires": [
+        "war_council"
+      ],
+      "unlocks": [
+        "relic_vault",
+        "monster_roost",
+        "siege_foundry",
+        "bark_ancient_squad",
+        "wild_hunt_rider_squad",
+        "dread_knight_squad",
+        "wild_hunt",
+        "court_of_bones"
+      ],
+      "researchSeconds": 70,
+      "costs": {
+        "gold": 280,
+        "wood": 180,
+        "witchglass": 60
+      }
+    }
+  ]
+}

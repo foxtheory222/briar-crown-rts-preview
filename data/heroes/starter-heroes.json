@@ -1,0 +1,84 @@
+{
+  "heroes": [
+    {
+      "id": "thorn_queen",
+      "name": "Thorn Queen",
+      "faction": "thorn_court",
+      "role": "control_commander",
+      "tier": 1,
+      "abilityIds": [
+        "briar_aegis",
+        "moon_snare",
+        "wild_hunt"
+      ],
+      "icon": "hero-thorn-queen.svg",
+      "xpToLevel": [
+        0,
+        200,
+        500,
+        900,
+        1400
+      ]
+    },
+    {
+      "id": "hartmarshal",
+      "name": "Hartmarshal",
+      "faction": "thorn_court",
+      "role": "cavalry_tactician",
+      "tier": 2,
+      "abilityIds": [
+        "hart_charge",
+        "dew_mending",
+        "rootbound_banner"
+      ],
+      "icon": "hero-hartmarshal.svg",
+      "xpToLevel": [
+        0,
+        200,
+        500,
+        900,
+        1400
+      ]
+    },
+    {
+      "id": "bone_regent",
+      "name": "Bone Regent",
+      "faction": "hollow_legion",
+      "role": "attrition_commander",
+      "tier": 1,
+      "abilityIds": [
+        "dread_edict",
+        "grave_command",
+        "court_of_bones"
+      ],
+      "icon": "hero-bone-regent.svg",
+      "xpToLevel": [
+        0,
+        200,
+        500,
+        900,
+        1400
+      ]
+    },
+    {
+      "id": "wailing_matron",
+      "name": "Wailing Matron",
+      "faction": "hollow_legion",
+      "role": "morale_caster",
+      "tier": 2,
+      "abilityIds": [
+        "wail_of_ashes",
+        "mourning_litany",
+        "bone_regalia"
+      ],
+      "icon": "hero-wailing-matron.svg",
+      "xpToLevel": [
+        0,
+        200,
+        500,
+        900,
+        1400
+      ]
+    }
+  ]
+}

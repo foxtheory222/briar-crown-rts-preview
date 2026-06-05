@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Combat",
+  "type": "object",
+  "required": ["combat"],
+  "properties": {
+    "combat": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "damageClasses", "armorClasses", "damageMultipliers"],
+        "properties": {
+          "id": { "type": "string" },
+          "damageClasses": { "type": "array", "items": { "type": "string" } },
+          "armorClasses": { "type": "array", "items": { "type": "string" } },
+          "damageMultipliers": { "type": "object" }
+        }
+      }
+    }
+  }
+}

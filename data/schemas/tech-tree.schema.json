@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tech Tree",
+  "type": "object",
+  "required": ["tiers"],
+  "properties": {
+    "tiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "tier", "requires", "unlocks", "researchSeconds", "costs"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "tier": { "type": "number" },
+          "requires": { "type": "array", "items": { "type": "string" } },
+          "unlocks": { "type": "array", "items": { "type": "string" } },
+          "researchSeconds": { "type": "number" },
+          "costs": { "type": "object" }
+        }
+      }
+    }
+  }
+}

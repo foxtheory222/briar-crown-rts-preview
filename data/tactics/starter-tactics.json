@@ -1,0 +1,22 @@
+{
+  "tactics": [
+    {
+      "id": "balanced_skirmish_ai",
+      "name": "Balanced Skirmish AI",
+      "buildPriorities": ["seat_of_rule", "farmstead", "logging_camp", "mineworks", "barracks", "cottage_cluster", "war_council"],
+      "armyPriorities": ["frontline", "ranged", "support_caster", "cavalry"],
+      "techPriorities": [
+        { "tierId": "t2_holdfast" },
+        {
+          "tierId": "t3_citadel",
+          "requiredBuilds": [
+            { "buildingId": "war_council", "x": 22, "y": 12 }
+          ]
+        }
+      ],
+      "retreatMoraleBelow": 35,
+      "attackWhenArmyValueAtLeast": 360,
+      "contestObjectives": true
+    }
+  ]
+}

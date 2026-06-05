@@ -1,0 +1,52 @@
+{
+  "objectives": [
+    {
+      "id": "moon_pool",
+      "name": "Moon Pool",
+      "type": "capture",
+      "reward": {
+        "witchglass": 3
+      },
+      "captureSeconds": 18,
+      "icon": "objective-moon-pool.svg",
+      "tickSeconds": 20,
+      "mapPresentation": {
+        "silhouette": "pool",
+        "emblem": "moon",
+        "accent": "witchglass"
+      }
+    },
+    {
+      "id": "witchglass_shard",
+      "name": "Witchglass Shard",
+      "type": "rare_resource",
+      "reward": {
+        "witchglass": 5
+      },
+      "captureSeconds": 12,
+      "icon": "objective-witchglass-shard.svg",
+      "tickSeconds": 20,
+      "mapPresentation": {
+        "silhouette": "crystal",
+        "emblem": "shard",
+        "accent": "witchglass"
+      }
+    },
+    {
+      "id": "watcher_ruin",
+      "name": "Watcher Ruin",
+      "type": "vision",
+      "reward": {
+        "visionRadius": 10
+      },
+      "captureSeconds": 10,
+      "icon": "objective-watcher-ruin.svg",
+      "tickSeconds": 30,
+      "mapPresentation": {
+        "silhouette": "ruin",
+        "emblem": "watcher",
+        "accent": "vision"
+      }
+    }
+  ]
+}

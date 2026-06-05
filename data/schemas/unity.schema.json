@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Unity ScriptableObject Contract",
+  "type": "object",
+  "required": ["unity"],
+  "properties": {
+    "unity": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "unityVersion", "assetRoot", "namespace", "sourceNotes", "sourceDocuments"],
+        "properties": {
+          "id": { "type": "string" },
+          "unityVersion": { "type": "string" },
+          "assetRoot": { "type": "string" },
+          "namespace": { "type": "string" },
+          "sourceNotes": { "type": "string" },
+          "sourceDocuments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "category",
+                "source",
+                "collection",
+                "scriptableObject",
+                "assetFolder",
+                "idField",
+                "recordCount",
+                "requiredFields",
+                "typedFields"
+              ],
+              "properties": {
+                "category": { "type": "string" },
+                "source": { "type": "string" },
+                "collection": { "type": "string" },
+                "scriptableObject": { "type": "string" },
+                "assetFolder": { "type": "string" },
+                "idField": { "type": "string" },
+                "recordCount": { "type": "integer" },
+                "requiredFields": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "typedFields": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["jsonPath", "fieldName", "fieldType", "propertyName"],
+                    "properties": {
+                      "jsonPath": { "type": "string" },
+                      "fieldName": { "type": "string" },
+                      "fieldType": { "type": "string" },
+                      "propertyName": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

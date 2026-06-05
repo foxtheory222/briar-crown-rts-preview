@@ -1,0 +1,1172 @@
+{
+  "unity": [
+    {
+      "id": "starter_scriptable_object_contract",
+      "unityVersion": "Unity 6 LTS",
+      "assetRoot": "Assets/BriarCrown/Data",
+      "namespace": "BriarCrown.Content",
+      "sourceNotes": "docs/build-release/unity-recovery.md",
+      "sourceDocuments": [
+        {
+          "category": "resources",
+          "source": "data/economy/starter-resources.json",
+          "collection": "resources",
+          "scriptableObject": "BriarCrownResourceDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Resources",
+          "idField": "id",
+          "recordCount": 5,
+          "requiredFields": [
+            "id",
+            "name",
+            "spendable"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "spendable",
+              "fieldName": "spendable",
+              "fieldType": "bool",
+              "propertyName": "Spendable"
+            }
+          ]
+        },
+        {
+          "category": "buildings",
+          "source": "data/buildings/starter-buildings.json",
+          "collection": "buildings",
+          "scriptableObject": "BriarCrownBuildingDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Buildings",
+          "idField": "id",
+          "recordCount": 23,
+          "requiredFields": [
+            "id",
+            "name",
+            "tier",
+            "faction",
+            "costs",
+            "footprint.w",
+            "footprint.h",
+            "icon",
+            "model",
+            "buildSeconds",
+            "mapPresentation.silhouette",
+            "mapPresentation.emblem",
+            "mapPresentation.accent"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "tier",
+              "fieldName": "tier",
+              "fieldType": "int",
+              "propertyName": "Tier"
+            },
+            {
+              "jsonPath": "faction",
+              "fieldName": "faction",
+              "fieldType": "string",
+              "propertyName": "Faction"
+            },
+            {
+              "jsonPath": "costs",
+              "fieldName": "costs",
+              "fieldType": "BriarCrownCostRow[]",
+              "propertyName": "Costs"
+            },
+            {
+              "jsonPath": "footprint.w",
+              "fieldName": "footprint",
+              "fieldType": "BriarCrownFootprintFields",
+              "propertyName": "Footprint.W"
+            },
+            {
+              "jsonPath": "footprint.h",
+              "fieldName": "footprint",
+              "fieldType": "BriarCrownFootprintFields",
+              "propertyName": "Footprint.H"
+            },
+            {
+              "jsonPath": "icon",
+              "fieldName": "icon",
+              "fieldType": "string",
+              "propertyName": "Icon"
+            },
+            {
+              "jsonPath": "model",
+              "fieldName": "model",
+              "fieldType": "string",
+              "propertyName": "Model"
+            },
+            {
+              "jsonPath": "buildSeconds",
+              "fieldName": "buildSeconds",
+              "fieldType": "float",
+              "propertyName": "BuildSeconds"
+            },
+            {
+              "jsonPath": "mapPresentation.silhouette",
+              "fieldName": "mapPresentation",
+              "fieldType": "BriarCrownMapPresentationFields",
+              "propertyName": "MapPresentation.Silhouette"
+            },
+            {
+              "jsonPath": "mapPresentation.emblem",
+              "fieldName": "mapPresentation",
+              "fieldType": "BriarCrownMapPresentationFields",
+              "propertyName": "MapPresentation.Emblem"
+            },
+            {
+              "jsonPath": "mapPresentation.accent",
+              "fieldName": "mapPresentation",
+              "fieldType": "BriarCrownMapPresentationFields",
+              "propertyName": "MapPresentation.Accent"
+            }
+          ]
+        },
+        {
+          "category": "units",
+          "source": "data/units/starter-units.json",
+          "collection": "units",
+          "scriptableObject": "BriarCrownUnitDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Units",
+          "idField": "id",
+          "recordCount": 14,
+          "requiredFields": [
+            "id",
+            "name",
+            "faction",
+            "role",
+            "health",
+            "damage",
+            "damageClass",
+            "armorClass",
+            "icon"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "faction",
+              "fieldName": "faction",
+              "fieldType": "string",
+              "propertyName": "Faction"
+            },
+            {
+              "jsonPath": "role",
+              "fieldName": "role",
+              "fieldType": "string",
+              "propertyName": "Role"
+            },
+            {
+              "jsonPath": "health",
+              "fieldName": "health",
+              "fieldType": "float",
+              "propertyName": "Health"
+            },
+            {
+              "jsonPath": "damage",
+              "fieldName": "damage",
+              "fieldType": "float",
+              "propertyName": "Damage"
+            },
+            {
+              "jsonPath": "damageClass",
+              "fieldName": "damageClass",
+              "fieldType": "string",
+              "propertyName": "DamageClass"
+            },
+            {
+              "jsonPath": "armorClass",
+              "fieldName": "armorClass",
+              "fieldType": "string",
+              "propertyName": "ArmorClass"
+            },
+            {
+              "jsonPath": "icon",
+              "fieldName": "icon",
+              "fieldType": "string",
+              "propertyName": "Icon"
+            }
+          ]
+        },
+        {
+          "category": "squads",
+          "source": "data/squads/starter-squads.json",
+          "collection": "squads",
+          "scriptableObject": "BriarCrownSquadDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Squads",
+          "idField": "id",
+          "recordCount": 14,
+          "requiredFields": [
+            "id",
+            "name",
+            "faction",
+            "unitId",
+            "size",
+            "costs",
+            "housing",
+            "moraleProfile",
+            "commands",
+            "icon",
+            "trainSeconds",
+            "mapPresentation.silhouette",
+            "mapPresentation.emblem",
+            "mapPresentation.accent"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "faction",
+              "fieldName": "faction",
+              "fieldType": "string",
+              "propertyName": "Faction"
+            },
+            {
+              "jsonPath": "unitId",
+              "fieldName": "unitId",
+              "fieldType": "string",
+              "propertyName": "UnitId"
+            },
+            {
+              "jsonPath": "size",
+              "fieldName": "size",
+              "fieldType": "int",
+              "propertyName": "Size"
+            },
+            {
+              "jsonPath": "costs",
+              "fieldName": "costs",
+              "fieldType": "BriarCrownCostRow[]",
+              "propertyName": "Costs"
+            },
+            {
+              "jsonPath": "housing",
+              "fieldName": "housing",
+              "fieldType": "int",
+              "propertyName": "Housing"
+            },
+            {
+              "jsonPath": "moraleProfile",
+              "fieldName": "moraleProfile",
+              "fieldType": "string",
+              "propertyName": "MoraleProfile"
+            },
+            {
+              "jsonPath": "commands",
+              "fieldName": "commands",
+              "fieldType": "string[]",
+              "propertyName": "Commands"
+            },
+            {
+              "jsonPath": "icon",
+              "fieldName": "icon",
+              "fieldType": "string",
+              "propertyName": "Icon"
+            },
+            {
+              "jsonPath": "trainSeconds",
+              "fieldName": "trainSeconds",
+              "fieldType": "float",
+              "propertyName": "TrainSeconds"
+            },
+            {
+              "jsonPath": "mapPresentation.silhouette",
+              "fieldName": "mapPresentation",
+              "fieldType": "BriarCrownMapPresentationFields",
+              "propertyName": "MapPresentation.Silhouette"
+            },
+            {
+              "jsonPath": "mapPresentation.emblem",
+              "fieldName": "mapPresentation",
+              "fieldType": "BriarCrownMapPresentationFields",
+              "propertyName": "MapPresentation.Emblem"
+            },
+            {
+              "jsonPath": "mapPresentation.accent",
+              "fieldName": "mapPresentation",
+              "fieldType": "BriarCrownMapPresentationFields",
+              "propertyName": "MapPresentation.Accent"
+            }
+          ]
+        },
+        {
+          "category": "heroes",
+          "source": "data/heroes/starter-heroes.json",
+          "collection": "heroes",
+          "scriptableObject": "BriarCrownHeroDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Heroes",
+          "idField": "id",
+          "recordCount": 4,
+          "requiredFields": [
+            "id",
+            "name",
+            "faction",
+            "role",
+            "tier",
+            "abilityIds",
+            "icon",
+            "xpToLevel"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "faction",
+              "fieldName": "faction",
+              "fieldType": "string",
+              "propertyName": "Faction"
+            },
+            {
+              "jsonPath": "role",
+              "fieldName": "role",
+              "fieldType": "string",
+              "propertyName": "Role"
+            },
+            {
+              "jsonPath": "tier",
+              "fieldName": "tier",
+              "fieldType": "int",
+              "propertyName": "Tier"
+            },
+            {
+              "jsonPath": "abilityIds",
+              "fieldName": "abilityIds",
+              "fieldType": "string[]",
+              "propertyName": "AbilityIds"
+            },
+            {
+              "jsonPath": "icon",
+              "fieldName": "icon",
+              "fieldType": "string",
+              "propertyName": "Icon"
+            },
+            {
+              "jsonPath": "xpToLevel",
+              "fieldName": "xpToLevel",
+              "fieldType": "int[]",
+              "propertyName": "XpToLevel"
+            }
+          ]
+        },
+        {
+          "category": "abilities",
+          "source": "data/abilities/starter-abilities.json",
+          "collection": "abilities",
+          "scriptableObject": "BriarCrownAbilityDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Abilities",
+          "idField": "id",
+          "recordCount": 12,
+          "requiredFields": [
+            "id",
+            "name",
+            "kind",
+            "faction",
+            "effect",
+            "icon"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "kind",
+              "fieldName": "kind",
+              "fieldType": "string",
+              "propertyName": "Kind"
+            },
+            {
+              "jsonPath": "faction",
+              "fieldName": "faction",
+              "fieldType": "string",
+              "propertyName": "Faction"
+            },
+            {
+              "jsonPath": "effect",
+              "fieldName": "effect",
+              "fieldType": "string",
+              "propertyName": "Effect"
+            },
+            {
+              "jsonPath": "icon",
+              "fieldName": "icon",
+              "fieldType": "string",
+              "propertyName": "Icon"
+            }
+          ]
+        },
+        {
+          "category": "factions",
+          "source": "data/factions/mvp-factions.json",
+          "collection": "factions",
+          "scriptableObject": "BriarCrownFactionDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Factions",
+          "idField": "id",
+          "recordCount": 2,
+          "requiredFields": [
+            "id",
+            "name",
+            "uniqueMechanic",
+            "mechanic.id",
+            "mechanic.auraRadius",
+            "mechanic.productionSpeedMultiplier",
+            "colors.primary",
+            "colors.secondary",
+            "colors.accent",
+            "heroIds",
+            "squadIds",
+            "icon"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "uniqueMechanic",
+              "fieldName": "uniqueMechanic",
+              "fieldType": "string",
+              "propertyName": "UniqueMechanic"
+            },
+            {
+              "jsonPath": "mechanic.id",
+              "fieldName": "mechanic",
+              "fieldType": "BriarCrownFactionMechanicFields",
+              "propertyName": "Mechanic.Id"
+            },
+            {
+              "jsonPath": "mechanic.auraRadius",
+              "fieldName": "mechanic",
+              "fieldType": "BriarCrownFactionMechanicFields",
+              "propertyName": "Mechanic.AuraRadius"
+            },
+            {
+              "jsonPath": "mechanic.productionSpeedMultiplier",
+              "fieldName": "mechanic",
+              "fieldType": "BriarCrownFactionMechanicFields",
+              "propertyName": "Mechanic.ProductionSpeedMultiplier"
+            },
+            {
+              "jsonPath": "colors.primary",
+              "fieldName": "colors",
+              "fieldType": "BriarCrownColorFields",
+              "propertyName": "Colors.Primary"
+            },
+            {
+              "jsonPath": "colors.secondary",
+              "fieldName": "colors",
+              "fieldType": "BriarCrownColorFields",
+              "propertyName": "Colors.Secondary"
+            },
+            {
+              "jsonPath": "colors.accent",
+              "fieldName": "colors",
+              "fieldType": "BriarCrownColorFields",
+              "propertyName": "Colors.Accent"
+            },
+            {
+              "jsonPath": "heroIds",
+              "fieldName": "heroIds",
+              "fieldType": "string[]",
+              "propertyName": "HeroIds"
+            },
+            {
+              "jsonPath": "squadIds",
+              "fieldName": "squadIds",
+              "fieldType": "string[]",
+              "propertyName": "SquadIds"
+            },
+            {
+              "jsonPath": "icon",
+              "fieldName": "icon",
+              "fieldType": "string",
+              "propertyName": "Icon"
+            }
+          ]
+        },
+        {
+          "category": "biomes",
+          "source": "data/biomes/starter-biomes.json",
+          "collection": "biomes",
+          "scriptableObject": "BriarCrownBiomeDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Biomes",
+          "idField": "id",
+          "recordCount": 3,
+          "requiredFields": [
+            "id",
+            "name",
+            "palette",
+            "readabilityNotes"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "palette",
+              "fieldName": "palette",
+              "fieldType": "string[]",
+              "propertyName": "Palette"
+            },
+            {
+              "jsonPath": "readabilityNotes",
+              "fieldName": "readabilityNotes",
+              "fieldType": "string",
+              "propertyName": "ReadabilityNotes"
+            }
+          ]
+        },
+        {
+          "category": "maps",
+          "source": "data/maps/showcase-map.json",
+          "collection": "maps",
+          "scriptableObject": "BriarCrownMapDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Maps",
+          "idField": "id",
+          "recordCount": 1,
+          "requiredFields": [
+            "id",
+            "name",
+            "biomeId",
+            "width",
+            "height",
+            "players",
+            "objectiveIds",
+            "objectivePositions",
+            "terrainFeatures"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "biomeId",
+              "fieldName": "biomeId",
+              "fieldType": "string",
+              "propertyName": "BiomeId"
+            },
+            {
+              "jsonPath": "width",
+              "fieldName": "width",
+              "fieldType": "int",
+              "propertyName": "Width"
+            },
+            {
+              "jsonPath": "height",
+              "fieldName": "height",
+              "fieldType": "int",
+              "propertyName": "Height"
+            },
+            {
+              "jsonPath": "players",
+              "fieldName": "players",
+              "fieldType": "int",
+              "propertyName": "Players"
+            },
+            {
+              "jsonPath": "objectiveIds",
+              "fieldName": "objectiveIds",
+              "fieldType": "string[]",
+              "propertyName": "ObjectiveIds"
+            },
+            {
+              "jsonPath": "objectivePositions",
+              "fieldName": "objectivePositions",
+              "fieldType": "BriarCrownMapPointRow[]",
+              "propertyName": "ObjectivePositions"
+            },
+            {
+              "jsonPath": "terrainFeatures",
+              "fieldName": "terrainFeatures",
+              "fieldType": "BriarCrownTerrainFeatureFields[]",
+              "propertyName": "TerrainFeatures"
+            }
+          ]
+        },
+        {
+          "category": "objectives",
+          "source": "data/objectives/starter-objectives.json",
+          "collection": "objectives",
+          "scriptableObject": "BriarCrownObjectiveDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Objectives",
+          "idField": "id",
+          "recordCount": 3,
+          "requiredFields": [
+            "id",
+            "name",
+            "type",
+            "reward",
+            "captureSeconds",
+            "icon",
+            "tickSeconds",
+            "mapPresentation.silhouette",
+            "mapPresentation.emblem",
+            "mapPresentation.accent"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "type",
+              "fieldName": "type",
+              "fieldType": "string",
+              "propertyName": "Type"
+            },
+            {
+              "jsonPath": "reward",
+              "fieldName": "reward",
+              "fieldType": "BriarCrownObjectiveRewardFields",
+              "propertyName": "Reward"
+            },
+            {
+              "jsonPath": "captureSeconds",
+              "fieldName": "captureSeconds",
+              "fieldType": "float",
+              "propertyName": "CaptureSeconds"
+            },
+            {
+              "jsonPath": "icon",
+              "fieldName": "icon",
+              "fieldType": "string",
+              "propertyName": "Icon"
+            },
+            {
+              "jsonPath": "tickSeconds",
+              "fieldName": "tickSeconds",
+              "fieldType": "float",
+              "propertyName": "TickSeconds"
+            },
+            {
+              "jsonPath": "mapPresentation.silhouette",
+              "fieldName": "mapPresentation",
+              "fieldType": "BriarCrownMapPresentationFields",
+              "propertyName": "MapPresentation.Silhouette"
+            },
+            {
+              "jsonPath": "mapPresentation.emblem",
+              "fieldName": "mapPresentation",
+              "fieldType": "BriarCrownMapPresentationFields",
+              "propertyName": "MapPresentation.Emblem"
+            },
+            {
+              "jsonPath": "mapPresentation.accent",
+              "fieldName": "mapPresentation",
+              "fieldType": "BriarCrownMapPresentationFields",
+              "propertyName": "MapPresentation.Accent"
+            }
+          ]
+        },
+        {
+          "category": "tactics",
+          "source": "data/tactics/starter-tactics.json",
+          "collection": "tactics",
+          "scriptableObject": "BriarCrownAiTacticDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/Tactics",
+          "idField": "id",
+          "recordCount": 1,
+          "requiredFields": [
+            "id",
+            "name",
+            "buildPriorities",
+            "armyPriorities",
+            "techPriorities",
+            "retreatMoraleBelow",
+            "attackWhenArmyValueAtLeast",
+            "contestObjectives"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "buildPriorities",
+              "fieldName": "buildPriorities",
+              "fieldType": "string[]",
+              "propertyName": "BuildPriorities"
+            },
+            {
+              "jsonPath": "armyPriorities",
+              "fieldName": "armyPriorities",
+              "fieldType": "string[]",
+              "propertyName": "ArmyPriorities"
+            },
+            {
+              "jsonPath": "techPriorities",
+              "fieldName": "techPriorities",
+              "fieldType": "BriarCrownAiTechPriorityFields[]",
+              "propertyName": "TechPriorities"
+            },
+            {
+              "jsonPath": "retreatMoraleBelow",
+              "fieldName": "retreatMoraleBelow",
+              "fieldType": "float",
+              "propertyName": "RetreatMoraleBelow"
+            },
+            {
+              "jsonPath": "attackWhenArmyValueAtLeast",
+              "fieldName": "attackWhenArmyValueAtLeast",
+              "fieldType": "int",
+              "propertyName": "AttackWhenArmyValueAtLeast"
+            },
+            {
+              "jsonPath": "contestObjectives",
+              "fieldName": "contestObjectives",
+              "fieldType": "bool",
+              "propertyName": "ContestObjectives"
+            }
+          ]
+        },
+        {
+          "category": "morale",
+          "source": "data/morale/starter-morale.json",
+          "collection": "morale",
+          "scriptableObject": "BriarCrownMoraleProfile",
+          "assetFolder": "Assets/BriarCrown/Data/Morale",
+          "idField": "id",
+          "recordCount": 4,
+          "requiredFields": [
+            "id",
+            "steadyAt",
+            "shakenAt",
+            "lossPenalty",
+            "flankedPenalty",
+            "heroDeathPenalty",
+            "fearPenalty",
+            "bombardmentPenalty"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "steadyAt",
+              "fieldName": "steadyAt",
+              "fieldType": "float",
+              "propertyName": "SteadyAt"
+            },
+            {
+              "jsonPath": "shakenAt",
+              "fieldName": "shakenAt",
+              "fieldType": "float",
+              "propertyName": "ShakenAt"
+            },
+            {
+              "jsonPath": "lossPenalty",
+              "fieldName": "lossPenalty",
+              "fieldType": "float",
+              "propertyName": "LossPenalty"
+            },
+            {
+              "jsonPath": "flankedPenalty",
+              "fieldName": "flankedPenalty",
+              "fieldType": "float",
+              "propertyName": "FlankedPenalty"
+            },
+            {
+              "jsonPath": "heroDeathPenalty",
+              "fieldName": "heroDeathPenalty",
+              "fieldType": "float",
+              "propertyName": "HeroDeathPenalty"
+            },
+            {
+              "jsonPath": "fearPenalty",
+              "fieldName": "fearPenalty",
+              "fieldType": "float",
+              "propertyName": "FearPenalty"
+            },
+            {
+              "jsonPath": "bombardmentPenalty",
+              "fieldName": "bombardmentPenalty",
+              "fieldType": "float",
+              "propertyName": "BombardmentPenalty"
+            }
+          ]
+        },
+        {
+          "category": "combat",
+          "source": "data/combat/damage-armor.json",
+          "collection": "combat",
+          "scriptableObject": "BriarCrownCombatMatrix",
+          "assetFolder": "Assets/BriarCrown/Data/Combat",
+          "idField": "id",
+          "recordCount": 1,
+          "requiredFields": [
+            "id",
+            "armorClasses",
+            "damageMultipliers"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "armorClasses",
+              "fieldName": "armorClasses",
+              "fieldType": "string[]",
+              "propertyName": "ArmorClasses"
+            },
+            {
+              "jsonPath": "damageMultipliers",
+              "fieldName": "damageMultipliers",
+              "fieldType": "BriarCrownDamageMultiplierRow[]",
+              "propertyName": "DamageMultipliers"
+            }
+          ]
+        },
+        {
+          "category": "simulation",
+          "source": "data/simulation/starter-simulation.json",
+          "collection": "simulation",
+          "scriptableObject": "BriarCrownSimulationTuning",
+          "assetFolder": "Assets/BriarCrown/Data/Simulation",
+          "idField": "id",
+          "recordCount": 1,
+          "requiredFields": [
+            "id",
+            "movementSpeeds.default",
+            "movementSpeeds.capture",
+            "movementSpeeds.retreat",
+            "combatRanges.default",
+            "combatRanges.ranged",
+            "combatRanges.caster",
+            "combatRanges.siege",
+            "structureAttackMinRange",
+            "tacticalOrders.stanceModes",
+            "tacticalOrders.formations",
+            "tacticalOrders.targetPriorities"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "movementSpeeds.default",
+              "fieldName": "movementSpeeds",
+              "fieldType": "BriarCrownMovementSpeedFields",
+              "propertyName": "MovementSpeeds.Default"
+            },
+            {
+              "jsonPath": "movementSpeeds.capture",
+              "fieldName": "movementSpeeds",
+              "fieldType": "BriarCrownMovementSpeedFields",
+              "propertyName": "MovementSpeeds.Capture"
+            },
+            {
+              "jsonPath": "movementSpeeds.retreat",
+              "fieldName": "movementSpeeds",
+              "fieldType": "BriarCrownMovementSpeedFields",
+              "propertyName": "MovementSpeeds.Retreat"
+            },
+            {
+              "jsonPath": "combatRanges.default",
+              "fieldName": "combatRanges",
+              "fieldType": "BriarCrownCombatRangeFields",
+              "propertyName": "CombatRanges.Default"
+            },
+            {
+              "jsonPath": "combatRanges.ranged",
+              "fieldName": "combatRanges",
+              "fieldType": "BriarCrownCombatRangeFields",
+              "propertyName": "CombatRanges.Ranged"
+            },
+            {
+              "jsonPath": "combatRanges.caster",
+              "fieldName": "combatRanges",
+              "fieldType": "BriarCrownCombatRangeFields",
+              "propertyName": "CombatRanges.Caster"
+            },
+            {
+              "jsonPath": "combatRanges.siege",
+              "fieldName": "combatRanges",
+              "fieldType": "BriarCrownCombatRangeFields",
+              "propertyName": "CombatRanges.Siege"
+            },
+            {
+              "jsonPath": "structureAttackMinRange",
+              "fieldName": "structureAttackMinRange",
+              "fieldType": "float",
+              "propertyName": "StructureAttackMinRange"
+            },
+            {
+              "jsonPath": "tacticalOrders.stanceModes",
+              "fieldName": "tacticalOrders",
+              "fieldType": "BriarCrownTacticalOrderFields",
+              "propertyName": "TacticalOrders.StanceModes"
+            },
+            {
+              "jsonPath": "tacticalOrders.formations",
+              "fieldName": "tacticalOrders",
+              "fieldType": "BriarCrownTacticalOrderFields",
+              "propertyName": "TacticalOrders.Formations"
+            },
+            {
+              "jsonPath": "tacticalOrders.targetPriorities",
+              "fieldName": "tacticalOrders",
+              "fieldType": "BriarCrownTacticalOrderFields",
+              "propertyName": "TacticalOrders.TargetPriorities"
+            }
+          ]
+        },
+        {
+          "category": "audio",
+          "source": "data/audio/starter-audio.json",
+          "collection": "audio",
+          "scriptableObject": "BriarCrownAudioCuePack",
+          "assetFolder": "Assets/BriarCrown/Data/Audio",
+          "idField": "id",
+          "recordCount": 1,
+          "requiredFields": [
+            "id",
+            "license",
+            "enginePackage",
+            "cues"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "license",
+              "fieldName": "license",
+              "fieldType": "string",
+              "propertyName": "License"
+            },
+            {
+              "jsonPath": "enginePackage",
+              "fieldName": "enginePackage",
+              "fieldType": "string",
+              "propertyName": "EnginePackage"
+            },
+            {
+              "jsonPath": "cues",
+              "fieldName": "cues",
+              "fieldType": "BriarCrownAudioCueFields[]",
+              "propertyName": "Cues"
+            }
+          ]
+        },
+        {
+          "category": "effects",
+          "source": "data/effects/starter-engine-vfx.json",
+          "collection": "effects",
+          "scriptableObject": "BriarCrownEffectRulePack",
+          "assetFolder": "Assets/BriarCrown/Data/Effects",
+          "idField": "id",
+          "recordCount": 1,
+          "requiredFields": [
+            "id",
+            "license",
+            "enginePackage",
+            "rules"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "license",
+              "fieldName": "license",
+              "fieldType": "string",
+              "propertyName": "License"
+            },
+            {
+              "jsonPath": "enginePackage",
+              "fieldName": "enginePackage",
+              "fieldType": "string",
+              "propertyName": "EnginePackage"
+            },
+            {
+              "jsonPath": "rules",
+              "fieldName": "rules",
+              "fieldType": "BriarCrownEffectRuleFields[]",
+              "propertyName": "Rules"
+            }
+          ]
+        },
+        {
+          "category": "tech-tree",
+          "source": "data/tech-tree.json",
+          "collection": "tiers",
+          "scriptableObject": "BriarCrownTechTierDefinition",
+          "assetFolder": "Assets/BriarCrown/Data/TechTree",
+          "idField": "id",
+          "recordCount": 3,
+          "requiredFields": [
+            "id",
+            "name",
+            "tier",
+            "requires",
+            "unlocks",
+            "researchSeconds",
+            "costs"
+          ],
+          "typedFields": [
+            {
+              "jsonPath": "id",
+              "fieldName": "id",
+              "fieldType": "string",
+              "propertyName": "Id"
+            },
+            {
+              "jsonPath": "name",
+              "fieldName": "typedName",
+              "fieldType": "string",
+              "propertyName": "Name"
+            },
+            {
+              "jsonPath": "tier",
+              "fieldName": "tier",
+              "fieldType": "int",
+              "propertyName": "Tier"
+            },
+            {
+              "jsonPath": "requires",
+              "fieldName": "requires",
+              "fieldType": "string[]",
+              "propertyName": "Requires"
+            },
+            {
+              "jsonPath": "unlocks",
+              "fieldName": "unlocks",
+              "fieldType": "string[]",
+              "propertyName": "Unlocks"
+            },
+            {
+              "jsonPath": "researchSeconds",
+              "fieldName": "researchSeconds",
+              "fieldType": "float",
+              "propertyName": "ResearchSeconds"
+            },
+            {
+              "jsonPath": "costs",
+              "fieldName": "costs",
+              "fieldType": "BriarCrownCostRow[]",
+              "propertyName": "Costs"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

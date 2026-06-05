@@ -1,0 +1,90 @@
+{
+  "effects": [
+    {
+      "id": "starter_engine_vfx",
+      "license": "original_data_defined_vectors",
+      "enginePackage": "art_source/effects/engine-vfx-manifest.json",
+      "notes": "Restrained data-defined combat effect rules for Unity or another engine import. Browser VFX proof uses the same event/layer vocabulary.",
+      "rules": [
+        {
+          "id": "command_intent",
+          "eventKind": "order",
+          "layer": "command_intent",
+          "anchor": "source_target",
+          "blendMode": "alpha",
+          "durationSeconds": 0.48,
+          "opacity": 0.58,
+          "maxConcurrent": 4,
+          "palette": "selection_gold",
+          "glyphs": ["destination_ring", "chevron_stack", "arc_trail"],
+          "notes": "Thin player-order spine with a destination ring and short trail; no full-screen flash."
+        },
+        {
+          "id": "unit_impact",
+          "eventKind": "squad-hit",
+          "layer": "unit_impact",
+          "anchor": "target",
+          "blendMode": "additive",
+          "durationSeconds": 0.32,
+          "opacity": 0.62,
+          "maxConcurrent": 6,
+          "palette": "impact_sparks",
+          "glyphs": ["target_flash", "burst_sparks", "hit_ticks"],
+          "notes": "Compact target-space hit language kept below selection and hero ability priority."
+        },
+        {
+          "id": "structure_impact",
+          "eventKind": "structure-hit",
+          "layer": "structure_impact",
+          "anchor": "target",
+          "blendMode": "alpha",
+          "durationSeconds": 0.5,
+          "opacity": 0.56,
+          "maxConcurrent": 5,
+          "palette": "stone_debris",
+          "glyphs": ["shockwave", "debris_ticks", "dust_pulse"],
+          "notes": "Heavier structure hit read using short debris ticks instead of persistent smoke walls."
+        },
+        {
+          "id": "lethal_resolution",
+          "eventKind": "death",
+          "layer": "lethal_resolution",
+          "anchor": "target",
+          "blendMode": "alpha",
+          "durationSeconds": 0.78,
+          "opacity": 0.68,
+          "maxConcurrent": 5,
+          "palette": "faction_residue",
+          "glyphs": ["fade_ring", "morale_break", "thorn_petal_residue", "bone_dust_residue"],
+          "notes": "Readable lethal aftermath that preserves faction residue without obscuring nearby commands."
+        },
+        {
+          "id": "hero_ability",
+          "eventKind": "ability",
+          "layer": "hero_ability",
+          "anchor": "source_target",
+          "blendMode": "additive",
+          "durationSeconds": 0.62,
+          "opacity": 0.7,
+          "maxConcurrent": 3,
+          "palette": "witchglass_teal",
+          "glyphs": ["ability_sigils", "heavy_trail", "target_runes"],
+          "notes": "Highest-priority nonlethal combat read; short, bright, and anchored to caster plus target."
+        },
+        {
+          "id": "priority_warning",
+          "eventKind": "priority-warning",
+          "layer": "priority_warning",
+          "anchor": "selection",
+          "blendMode": "alpha",
+          "durationSeconds": 0.54,
+          "opacity": 0.64,
+          "maxConcurrent": 4,
+          "palette": "danger_crimson",
+          "glyphs": ["warning_brackets", "threat_pips", "selection_pulse"],
+          "notes": "Selection-local warning language for focus fire, retreat, or morale danger."
+        }
+      ]
+    }
+  ]
+}

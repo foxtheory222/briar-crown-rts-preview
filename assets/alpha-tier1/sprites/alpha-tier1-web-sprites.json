@@ -1,0 +1,147 @@
+{
+  "generatedAt": "2026-06-05",
+  "generator": "art-source/blender/scripts/generate_alpha_web_sprites.py",
+  "note": "Transparent web sprites rendered from self-authored Blender alpha tier 1 assets. No third-party images, textures, models, animation, or audio were imported.",
+  "sprites": [
+    {
+      "id": "ThornCourt_SeatOfRule_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/ThornCourt_SeatOfRule_AlphaT1.png"
+    },
+    {
+      "id": "ThornCourt_Farmstead_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/ThornCourt_Farmstead_AlphaT1.png"
+    },
+    {
+      "id": "ThornCourt_LoggingCamp_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/ThornCourt_LoggingCamp_AlphaT1.png"
+    },
+    {
+      "id": "ThornCourt_Mineworks_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/ThornCourt_Mineworks_AlphaT1.png"
+    },
+    {
+      "id": "ThornCourt_Barracks_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/ThornCourt_Barracks_AlphaT1.png"
+    },
+    {
+      "id": "ThornCourt_Watchtower_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/ThornCourt_Watchtower_AlphaT1.png"
+    },
+    {
+      "id": "HollowLegion_SeatOfRule_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/HollowLegion_SeatOfRule_AlphaT1.png"
+    },
+    {
+      "id": "HollowLegion_Farmstead_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/HollowLegion_Farmstead_AlphaT1.png"
+    },
+    {
+      "id": "HollowLegion_Mineworks_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/HollowLegion_Mineworks_AlphaT1.png"
+    },
+    {
+      "id": "HollowLegion_CryptBarracks_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/HollowLegion_CryptBarracks_AlphaT1.png"
+    },
+    {
+      "id": "HollowLegion_BoneWatchtower_AlphaT1",
+      "builder": "building",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/HollowLegion_BoneWatchtower_AlphaT1.png"
+    },
+    {
+      "id": "Neutral_WitchglassShard_AlphaT1",
+      "builder": "prop",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/Neutral_WitchglassShard_AlphaT1.png"
+    },
+    {
+      "id": "Neutral_MoonPool_AlphaT1",
+      "builder": "prop",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/Neutral_MoonPool_AlphaT1.png"
+    },
+    {
+      "id": "Neutral_WatcherRuin_AlphaT1",
+      "builder": "prop",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/Neutral_WatcherRuin_AlphaT1.png"
+    },
+    {
+      "id": "ThornCourt_BriarGuard_AlphaT1",
+      "builder": "unit",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/ThornCourt_BriarGuard_AlphaT1.png"
+    },
+    {
+      "id": "ThornCourt_NeedleArcher_AlphaT1",
+      "builder": "unit",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/ThornCourt_NeedleArcher_AlphaT1.png"
+    },
+    {
+      "id": "ThornCourt_MothScout_AlphaT1",
+      "builder": "unit",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/ThornCourt_MothScout_AlphaT1.png"
+    },
+    {
+      "id": "HollowLegion_BoneThrall_AlphaT1",
+      "builder": "unit",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/HollowLegion_BoneThrall_AlphaT1.png"
+    },
+    {
+      "id": "HollowLegion_GraveBow_AlphaT1",
+      "builder": "unit",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/HollowLegion_GraveBow_AlphaT1.png"
+    },
+    {
+      "id": "HollowLegion_CarrionBat_AlphaT1",
+      "builder": "unit",
+      "source": "self-authored Blender alpha tier 1 asset",
+      "license": "Original project work for Briar Crown RTS",
+      "path": "client/web/assets/alpha-tier1/sprites/HollowLegion_CarrionBat_AlphaT1.png"
+    }
+  ]
+}

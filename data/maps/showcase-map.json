@@ -1,0 +1,36 @@
+{
+  "maps": [
+    {
+      "id": "briar_crossing_showcase",
+      "name": "Briar Crossing",
+      "biomeId": "grim_forest",
+      "width": 96,
+      "height": 96,
+      "players": 2,
+      "objectiveIds": ["moon_pool", "witchglass_shard", "watcher_ruin"],
+      "objectivePositions": {
+        "moon_pool": { "x": 15.5, "y": 6 },
+        "witchglass_shard": { "x": 16, "y": 13 },
+        "watcher_ruin": { "x": 15, "y": 10 }
+      },
+      "lanes": ["north_briar_path", "sunken_market", "south_grave_road"],
+      "blocked": [
+        { "x": 41, "y": 24, "w": 8, "h": 18 },
+        { "x": 28, "y": 55, "w": 16, "h": 8 }
+      ],
+      "terrainFeatures": [
+        { "id": "moonlit_briar_lane", "kind": "lane", "x": 0, "y": 8.5, "w": 32, "h": 3.2, "palette": "pressed_moss" },
+        { "id": "south_grave_road", "kind": "lane", "x": 4, "y": 14.1, "w": 23, "h": 2.4, "palette": "grave_silt" },
+        { "id": "thorn_court_grove", "kind": "grove", "x": 1.2, "y": 3, "w": 7.8, "h": 5.2, "palette": "thornwood" },
+        { "id": "hollow_bone_copse", "kind": "grove", "x": 23.3, "y": 2.2, "w": 7.1, "h": 5.8, "palette": "bone_lavender" },
+        { "id": "sunken_market_ruins", "kind": "ruin", "x": 12.8, "y": 8.2, "w": 6.8, "h": 3.8, "palette": "cold_stone" },
+        { "id": "moon_pool_glade", "kind": "pool", "x": 13.6, "y": 4.5, "w": 4.2, "h": 3.2, "palette": "moonwater" },
+        { "id": "witchglass_scatter", "kind": "crystal", "x": 14.2, "y": 12.1, "w": 4.4, "h": 2.3, "palette": "witchglass" },
+        { "id": "watcher_ring", "kind": "ruin", "x": 13.4, "y": 9, "w": 3.8, "h": 2.5, "palette": "mossed_bone" },
+        { "id": "north_bramble_wall", "kind": "bramble", "x": 9, "y": 1.1, "w": 13, "h": 1.8, "palette": "blackthorn" },
+        { "id": "south_bramble_wall", "kind": "bramble", "x": 10, "y": 17.2, "w": 13.8, "h": 1.5, "palette": "blackthorn" }
+      ],
+      "notes": "Initial showcase map target: moonlit forest crossing with ruins, capture objectives, and stronghold plateaus."
+    }
+  ]
+}

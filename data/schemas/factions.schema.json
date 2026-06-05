@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Factions",
+  "type": "object",
+  "required": ["factions"],
+  "properties": {
+    "factions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "fantasy", "uniqueMechanic", "mechanicRules", "mechanic", "colors", "heroIds", "squadIds", "icon"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "fantasy": { "type": "string" },
+          "uniqueMechanic": { "type": "string" },
+          "mechanicRules": { "type": "array", "items": { "type": "string" } },
+          "mechanic": {
+            "type": "object",
+            "required": ["id", "auraRadius", "constructionSpeedMultiplier", "productionSpeedMultiplier", "moraleRecoveryPerSecond", "killSoulEssence"],
+            "properties": {
+              "id": { "type": "string" },
+              "auraRadius": { "type": "number" },
+              "constructionSpeedMultiplier": { "type": "number" },
+              "productionSpeedMultiplier": { "type": "number" },
+              "moraleRecoveryPerSecond": { "type": "number" },
+              "killSoulEssence": { "type": "number" }
+            }
+          },
+          "colors": { "type": "object" },
+          "heroIds": { "type": "array", "items": { "type": "string" } },
+          "squadIds": { "type": "array", "items": { "type": "string" } },
+          "icon": { "type": "string" }
+        }
+      }
+    }
+  }
+}

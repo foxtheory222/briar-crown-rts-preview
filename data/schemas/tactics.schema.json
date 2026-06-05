@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tactics Profiles",
+  "type": "object",
+  "required": ["tactics"],
+  "properties": {
+    "tactics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "buildPriorities", "armyPriorities", "techPriorities", "retreatMoraleBelow", "attackWhenArmyValueAtLeast", "contestObjectives"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "buildPriorities": { "type": "array", "items": { "type": "string" } },
+          "armyPriorities": { "type": "array", "items": { "type": "string" } },
+          "techPriorities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["tierId"],
+              "properties": {
+                "tierId": { "type": "string" },
+                "requiredBuilds": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["buildingId", "x", "y"],
+                    "properties": {
+                      "buildingId": { "type": "string" },
+                      "x": { "type": "number" },
+                      "y": { "type": "number" }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "retreatMoraleBelow": { "type": "number" },
+          "attackWhenArmyValueAtLeast": { "type": "number" },
+          "contestObjectives": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

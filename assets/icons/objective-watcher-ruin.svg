@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Watcher Ruin objective">
+  <rect width="64" height="64" rx="8" fill="#17201d"/>
+  <path d="M14 52V31c0-9 7-16 16-16h4c9 0 16 7 16 16v21" fill="#2b312f" stroke="#8a918c" stroke-width="3"/>
+  <path d="M18 52h46M5 52h9M24 52V35c0-4 3-7 7-7h2c4 0 7 3 7 7v17" fill="none" stroke="#d8f3dc" stroke-width="3" stroke-linecap="round"/>
+  <path d="M16 25c8-8 24-8 32 0-8 8-24 8-32 0z" fill="#c9c1d9" stroke="#f2edf4" stroke-width="2"/>
+  <circle cx="32" cy="25" r="5" fill="#20202b"/>
+</svg>

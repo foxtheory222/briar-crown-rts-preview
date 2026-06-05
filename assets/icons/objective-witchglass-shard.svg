@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Witchglass Shard objective">
+  <rect width="64" height="64" rx="8" fill="#17201d"/>
+  <path d="M31 8 44 33 32 58 19 33z" fill="#c9c1d9" stroke="#f2edf4" stroke-width="3"/>
+  <path d="M19 23 8 43l13 8 7-19zM45 21l11 20-14 9-5-20z" fill="#7651a5" stroke="#d8f3dc" stroke-width="2"/>
+  <path d="M31 8v50M19 33h25M25 45l13-23" fill="none" stroke="#20202b" stroke-width="2" stroke-linecap="round"/>
+</svg>

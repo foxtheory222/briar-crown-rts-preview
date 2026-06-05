@@ -1,0 +1,604 @@
+{
+  "buildings": [
+    {
+      "id": "seat_of_rule",
+      "name": "Seat of Rule",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "town_center",
+      "costs": {
+        "gold": 200,
+        "wood": 120
+      },
+      "provides": {
+        "housing": 8
+      },
+      "income": {
+        "gold": 4
+      },
+      "laborPriority": "stewardship",
+      "footprint": {
+        "w": 4,
+        "h": 4
+      },
+      "produces": [
+        "briar_guard_squad",
+        "bone_thrall_squad"
+      ],
+      "icon": "building-seat.svg",
+      "model": "procedural/seat_of_rule",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "keep",
+        "emblem": "crown",
+        "accent": "seat"
+      }
+    },
+    {
+      "id": "cottage_cluster",
+      "name": "Cottage Cluster",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "housing",
+      "costs": {
+        "wood": 60
+      },
+      "provides": {
+        "housing": 8
+      },
+      "laborPriority": "settlement",
+      "footprint": {
+        "w": 2,
+        "h": 2
+      },
+      "icon": "building-cottage-cluster.svg",
+      "model": "procedural/cottage_cluster",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "cottage",
+        "emblem": "hearth",
+        "accent": "housing"
+      }
+    },
+    {
+      "id": "farmstead",
+      "name": "Farmstead",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "food",
+      "costs": {
+        "wood": 70
+      },
+      "income": {
+        "food": 6
+      },
+      "laborPriority": "farming",
+      "footprint": {
+        "w": 3,
+        "h": 3
+      },
+      "icon": "building-farmstead.svg",
+      "model": "procedural/farmstead",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "farm",
+        "emblem": "wheat",
+        "accent": "food"
+      }
+    },
+    {
+      "id": "logging_camp",
+      "name": "Logging Camp",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "wood",
+      "costs": {
+        "wood": 45
+      },
+      "income": {
+        "wood": 8
+      },
+      "laborPriority": "forestry",
+      "footprint": {
+        "w": 3,
+        "h": 2
+      },
+      "icon": "building-logging-camp.svg",
+      "model": "procedural/logging_camp",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "timber_yard",
+        "emblem": "axe",
+        "accent": "wood"
+      }
+    },
+    {
+      "id": "mineworks",
+      "name": "Mineworks",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "gold",
+      "costs": {
+        "wood": 65
+      },
+      "income": {
+        "gold": 7
+      },
+      "laborPriority": "mining",
+      "footprint": {
+        "w": 3,
+        "h": 2
+      },
+      "icon": "building-mineworks.svg",
+      "model": "procedural/mineworks",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "mine",
+        "emblem": "pick",
+        "accent": "gold"
+      }
+    },
+    {
+      "id": "storehouse",
+      "name": "Storehouse",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "dropoff",
+      "costs": {
+        "wood": 55
+      },
+      "storage": {
+        "gold": 200,
+        "wood": 200,
+        "food": 120
+      },
+      "laborPriority": "logistics",
+      "footprint": {
+        "w": 2,
+        "h": 2
+      },
+      "icon": "building-storehouse.svg",
+      "model": "procedural/storehouse",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "storehouse",
+        "emblem": "crate",
+        "accent": "storage"
+      }
+    },
+    {
+      "id": "market_cross",
+      "name": "Market Cross",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "market",
+      "costs": {
+        "gold": 80,
+        "wood": 80
+      },
+      "income": {
+        "gold": 3,
+        "food": 2
+      },
+      "laborPriority": "trade",
+      "footprint": {
+        "w": 3,
+        "h": 3
+      },
+      "icon": "building-market-cross.svg",
+      "model": "procedural/market_cross",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "market",
+        "emblem": "scales",
+        "accent": "market"
+      }
+    },
+    {
+      "id": "barracks",
+      "name": "Barracks",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "infantry_production",
+      "costs": {
+        "gold": 140,
+        "wood": 90
+      },
+      "footprint": {
+        "w": 3,
+        "h": 3
+      },
+      "produces": [
+        "briar_guard_squad",
+        "needle_archer_squad",
+        "bone_thrall_squad",
+        "grave_bow_squad"
+      ],
+      "icon": "building-barracks.svg",
+      "model": "procedural/barracks",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "war_hall",
+        "emblem": "swords",
+        "accent": "war"
+      }
+    },
+    {
+      "id": "scout_lodge",
+      "name": "Scout Lodge",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "scout_production",
+      "costs": {
+        "gold": 90,
+        "wood": 80
+      },
+      "footprint": {
+        "w": 3,
+        "h": 2
+      },
+      "produces": [
+        "moth_scout_squad",
+        "carrion_bat_squad"
+      ],
+      "icon": "building-scout-lodge.svg",
+      "model": "procedural/scout_lodge",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "scout_lodge",
+        "emblem": "moth",
+        "accent": "scout"
+      }
+    },
+    {
+      "id": "hero_shrine",
+      "name": "Hero Shrine",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "hero",
+      "costs": {
+        "gold": 160,
+        "wood": 80
+      },
+      "footprint": {
+        "w": 3,
+        "h": 3
+      },
+      "icon": "building-hero-shrine.svg",
+      "model": "procedural/hero_shrine",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "shrine",
+        "emblem": "hero",
+        "accent": "hero"
+      }
+    },
+    {
+      "id": "watchtower",
+      "name": "Watchtower",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "defense",
+      "costs": {
+        "gold": 80,
+        "wood": 110
+      },
+      "footprint": {
+        "w": 2,
+        "h": 2
+      },
+      "icon": "building-watchtower.svg",
+      "model": "procedural/watchtower",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "tower",
+        "emblem": "tower",
+        "accent": "defense"
+      }
+    },
+    {
+      "id": "palisade_gate",
+      "name": "Palisade and Gate",
+      "tier": 1,
+      "faction": "shared",
+      "chassis": "wall",
+      "costs": {
+        "wood": 35
+      },
+      "footprint": {
+        "w": 1,
+        "h": 3
+      },
+      "icon": "building-palisade-gate.svg",
+      "model": "procedural/palisade_gate",
+      "buildSeconds": 18,
+      "mapPresentation": {
+        "silhouette": "gate",
+        "emblem": "gate",
+        "accent": "defense"
+      }
+    },
+    {
+      "id": "smithy",
+      "name": "Smithy",
+      "tier": 2,
+      "faction": "shared",
+      "chassis": "upgrades",
+      "costs": {
+        "gold": 180,
+        "wood": 120
+      },
+      "footprint": {
+        "w": 3,
+        "h": 3
+      },
+      "icon": "building-smithy.svg",
+      "model": "procedural/smithy",
+      "buildSeconds": 32,
+      "mapPresentation": {
+        "silhouette": "smithy",
+        "emblem": "anvil",
+        "accent": "tech"
+      }
+    },
+    {
+      "id": "temple_of_lore",
+      "name": "Temple of Lore",
+      "tier": 2,
+      "faction": "shared",
+      "chassis": "caster",
+      "costs": {
+        "gold": 170,
+        "wood": 120,
+        "witchglass": 20
+      },
+      "footprint": {
+        "w": 3,
+        "h": 3
+      },
+      "produces": [
+        "dew_chanter_squad",
+        "mourning_choir_squad"
+      ],
+      "icon": "building-temple-of-lore.svg",
+      "model": "procedural/temple_of_lore",
+      "buildSeconds": 32,
+      "mapPresentation": {
+        "silhouette": "temple",
+        "emblem": "moon",
+        "accent": "tech"
+      }
+    },
+    {
+      "id": "kennels_stables",
+      "name": "Kennels/Stables",
+      "tier": 2,
+      "faction": "shared",
+      "chassis": "cavalry_beasts",
+      "costs": {
+        "gold": 180,
+        "wood": 150,
+        "food": 30
+      },
+      "footprint": {
+        "w": 4,
+        "h": 3
+      },
+      "produces": [
+        "hart_lancer_squad",
+        "crypt_lancer_squad"
+      ],
+      "icon": "building-kennels-stables.svg",
+      "model": "procedural/kennels_stables",
+      "buildSeconds": 32,
+      "mapPresentation": {
+        "silhouette": "stables",
+        "emblem": "hart",
+        "accent": "cavalry"
+      }
+    },
+    {
+      "id": "workshop",
+      "name": "Workshop",
+      "tier": 2,
+      "faction": "shared",
+      "chassis": "engineering",
+      "costs": {
+        "gold": 170,
+        "wood": 150
+      },
+      "footprint": {
+        "w": 4,
+        "h": 3
+      },
+      "produces": [
+        "bone_wagon_squad"
+      ],
+      "icon": "building-workshop.svg",
+      "model": "procedural/workshop",
+      "buildSeconds": 32,
+      "mapPresentation": {
+        "silhouette": "workshop",
+        "emblem": "gear",
+        "accent": "engineering"
+      }
+    },
+    {
+      "id": "infirmary",
+      "name": "Infirmary",
+      "tier": 2,
+      "faction": "shared",
+      "chassis": "recovery",
+      "costs": {
+        "gold": 110,
+        "wood": 120
+      },
+      "footprint": {
+        "w": 3,
+        "h": 3
+      },
+      "icon": "building-infirmary.svg",
+      "model": "procedural/infirmary",
+      "buildSeconds": 32,
+      "mapPresentation": {
+        "silhouette": "infirmary",
+        "emblem": "cross",
+        "accent": "recovery"
+      }
+    },
+    {
+      "id": "war_council",
+      "name": "War Council",
+      "tier": 2,
+      "faction": "shared",
+      "chassis": "tech_gate",
+      "costs": {
+        "gold": 220,
+        "wood": 180
+      },
+      "footprint": {
+        "w": 4,
+        "h": 4
+      },
+      "icon": "building-war-council.svg",
+      "model": "procedural/war_council",
+      "buildSeconds": 32,
+      "mapPresentation": {
+        "silhouette": "council",
+        "emblem": "banner",
+        "accent": "tech"
+      }
+    },
+    {
+      "id": "witchglass_cairn",
+      "name": "Witchglass Cairn",
+      "tier": 2,
+      "faction": "shared",
+      "chassis": "rare_resource",
+      "costs": {
+        "gold": 120,
+        "wood": 100
+      },
+      "income": {
+        "witchglass": 3
+      },
+      "laborPriority": "refinement",
+      "footprint": {
+        "w": 3,
+        "h": 3
+      },
+      "icon": "building-witchglass-cairn.svg",
+      "model": "procedural/witchglass_cairn",
+      "buildSeconds": 32,
+      "mapPresentation": {
+        "silhouette": "cairn",
+        "emblem": "crystal",
+        "accent": "witchglass"
+      }
+    },
+    {
+      "id": "relic_vault",
+      "name": "Relic Vault",
+      "tier": 3,
+      "faction": "shared",
+      "chassis": "elite_tech",
+      "costs": {
+        "gold": 280,
+        "wood": 180,
+        "witchglass": 80
+      },
+      "footprint": {
+        "w": 4,
+        "h": 4
+      },
+      "icon": "building-relic-vault.svg",
+      "model": "procedural/relic_vault",
+      "buildSeconds": 48,
+      "mapPresentation": {
+        "silhouette": "vault",
+        "emblem": "relic",
+        "accent": "elite"
+      }
+    },
+    {
+      "id": "monster_roost",
+      "name": "Monster Roost",
+      "tier": 3,
+      "faction": "shared",
+      "chassis": "monster_air",
+      "costs": {
+        "gold": 260,
+        "wood": 220,
+        "food": 60,
+        "witchglass": 50
+      },
+      "footprint": {
+        "w": 4,
+        "h": 4
+      },
+      "produces": [
+        "bark_ancient_squad"
+      ],
+      "icon": "building-monster-roost.svg",
+      "model": "procedural/monster_roost",
+      "buildSeconds": 48,
+      "mapPresentation": {
+        "silhouette": "roost",
+        "emblem": "claw",
+        "accent": "monster"
+      }
+    },
+    {
+      "id": "siege_foundry",
+      "name": "Siege Foundry",
+      "tier": 3,
+      "faction": "shared",
+      "chassis": "siege",
+      "costs": {
+        "gold": 260,
+        "wood": 260,
+        "witchglass": 40
+      },
+      "footprint": {
+        "w": 4,
+        "h": 4
+      },
+      "produces": [
+        "bone_wagon_squad"
+      ],
+      "icon": "building-siege-foundry.svg",
+      "model": "procedural/siege_foundry",
+      "buildSeconds": 48,
+      "mapPresentation": {
+        "silhouette": "foundry",
+        "emblem": "wheel",
+        "accent": "siege"
+      }
+    },
+    {
+      "id": "mythic_gate",
+      "name": "Mythic Gate",
+      "tier": 4,
+      "faction": "future",
+      "chassis": "future_mythic",
+      "costs": {
+        "gold": 500,
+        "wood": 400,
+        "witchglass": 200
+      },
+      "footprint": {
+        "w": 5,
+        "h": 5
+      },
+      "icon": "building-mythic-gate.svg",
+      "model": "procedural/mythic_gate",
+      "future": true,
+      "buildSeconds": 110,
+      "mapPresentation": {
+        "silhouette": "mythic_gate",
+        "emblem": "portal",
+        "accent": "mythic"
+      }
+    }
+  ]
+}

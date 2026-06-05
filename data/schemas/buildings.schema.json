@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Buildings",
+  "type": "object",
+  "required": ["buildings"],
+  "properties": {
+    "buildings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "faction", "chassis", "footprint", "costs", "buildSeconds", "icon", "model", "mapPresentation"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "faction": { "type": "string" },
+          "chassis": { "type": "string" },
+          "footprint": {
+            "type": "object",
+            "required": ["w", "h"],
+            "properties": {
+              "w": { "type": "number" },
+              "h": { "type": "number" }
+            }
+          },
+          "costs": { "type": "object" },
+          "buildSeconds": { "type": "number" },
+          "icon": { "type": "string" },
+          "model": { "type": "string" },
+          "mapPresentation": {
+            "type": "object",
+            "required": ["silhouette", "emblem", "accent"],
+            "properties": {
+              "silhouette": { "type": "string" },
+              "emblem": { "type": "string" },
+              "accent": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
